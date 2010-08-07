@@ -1,0 +1,9 @@
+*.jar
+*.class
+*.exe
+_gsdata_
+.DS_Store
+lib
+.lein-repl-history
+target
+Thumbs.db
