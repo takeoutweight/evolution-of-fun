@@ -10,8 +10,10 @@ Note that this is "research code." It wasn't intended to serve as a slick, well 
 You need [Leiningen](http://leiningen.org/).
 
 You will also need the JaCoP 3.2 constraint satisfaction library. You can download the [jar](http://sourceforge.net/projects/jacop-solver/). It isn't available on any Maven repositories, but can be installed locally so Leiningen can find it via
+
     mvn install:install-file "-Dfile=JaCoP-3.2.jar" "-DgroupId=JaCoP" \
 	  "-DartifactId=JaCoP" "-Dversion=3.2" "-Dpackaging=jar" "-DgeneratePom=true"
+
 (thanks to [this blog post](http://xfthhxk.blogspot.ca/2013/05/maven-mayhem.html)).
 
 There is a mixture of Clojure and Java code, so the project needs to be compiled in stages:
