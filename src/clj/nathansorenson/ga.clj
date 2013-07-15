@@ -199,19 +199,19 @@
 
 ;this is hook that is rebound in window.clj TODO: better modularity
 (defn update-image [])
-			
+      
 (comment (defn printpop []
   "prints the fitness values of a population nicely"
   (doseq [item @*pop-infeasible*]
     (println (format "fit: \t%d" (:fitness item))))))
 
 (comment (defn save-stats 
-	"dumps the current best's fitness into a file"
-	[] 
-	(do
-		(dosync (ref-set stats (assoc @stats @generation ((currentbest) :fitness))))
-		(str-to-file (to-string @stats) "stats.txt"))))
+  "dumps the current best's fitness into a file"
+  [] 
+  (do
+    (dosync (ref-set stats (assoc @stats @generation ((currentbest) :fitness))))
+    (str-to-file (to-string @stats) "stats.txt"))))
 
 (defn makethread [step-fn] 
-	(proxy [Thread] []
-		(run [] (loop [] (step-fn) (recur) )))) ;switch this with zstep to do zelda.
+  (proxy [Thread] []
+    (run [] (loop [] (step-fn) (recur) )))) ;switch this with zstep to do zelda.

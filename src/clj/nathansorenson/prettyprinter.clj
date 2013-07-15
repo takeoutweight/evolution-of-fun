@@ -1,6 +1,6 @@
 ;; prettyprinter
 (ns nathansorenson.nutils
-	(:refer-clojure))
+  (:refer-clojure))
 
 (defmacro lazy-cons [x s]
   `(lazy-seq (cons ~x (lazy-seq ~s)))) 
@@ -168,4 +168,3 @@
        (print char)))
   ([obj]
      (pp obj 80))) 
-

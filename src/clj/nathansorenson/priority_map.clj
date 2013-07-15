@@ -1,4 +1,3 @@
-
 ;; Proposal for clojure.contrib.priority-map
 ;; A priority map is a map from items to priorities,
 ;; offering queue-like peek/pop as well as the map-like ability to
@@ -6,7 +5,7 @@
 ;; by Mark Engelberg (mark.engelberg@gmail.com)
 ;; June 30, 2010
 
-(ns nathansorenson.priority-map	
+(ns nathansorenson.priority-map 
   ;(:require )
   (:use clojure.test)
   (:import clojure.lang.MapEntry java.util.Map clojure.lang.PersistentTreeMap)
@@ -339,7 +338,7 @@ to Clojure's assortment of built-in maps (hash-map and sorted-map).")
 
 ;^:static
 (defn- pm-empty? [^PersistentPriorityMap pm]
-	(zero? (pm-count pm)))
+  (zero? (pm-count pm)))
 
 ; The main way to build priority maps
 (defn priority-map
